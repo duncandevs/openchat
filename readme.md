@@ -1,6 +1,3 @@
-Here is a comprehensive `README` for the project based on the given assignment requirements:
-
----
 ## Project Overview
 
 This project implements a simple chat application based on open source models
@@ -35,26 +32,19 @@ The frontend is a single-page chat application that allows users to send message
   - **Tailwind CSS**: For styling the UI components.
   - **Shadcn/UI**: For reusable UI components like buttons, inputs, and chat bubbles.
 
-### API Integration
-
-The frontend communicates with the backend via the `/api/v1/chat` endpoint:
-- **Message Flow**: Users type a message, which is sent to the backend. The backend responds with a stream of AI-generated messages.
-- **Asynchronous Handling**: The frontend makes asynchronous API requests to fetch the responses, showing a loading state during the request.
-- **Error Handling**: Basic error handling is implemented to show user-friendly messages if the API request fails.
-
 ## Monorepo Structure
 
 This project is organized as a monorepo, containing both the backend and frontend in separate directories:
 
 ```
-/project-root
+/apps
 ├── /openchat-backend       # Python backend service
 │   ├── Dockerfile
-│   ├── app.py     # Main application file
+│   ├── main.py     # Main application file
 │   └── requirements.txt
 ├── /openchat-frontend      # Next.js frontend service
 │   ├── Dockerfile
-│   ├── pages/     # Next.js pages
+│   ├── app/     # Next.js pages
 │   ├── components/ # React components
 │   ├── tailwind.config.js
 │   └── package.json
@@ -89,7 +79,7 @@ Took some additional time to polish the frontend and create the readme which con
 
 1. Install dependencies:
    ```bash
-   cd backend
+   cd openchat-backend
    pip install -r requirements.txt
    ```
 
@@ -107,13 +97,13 @@ Took some additional time to polish the frontend and create the readme which con
 
 1. Install dependencies:
    ```bash
-   cd frontend
-   npm install
+   cd openchat-frontend
+   yarn install
    ```
 
 2. Run the frontend locally:
    ```bash
-   npm run dev
+   yarn dev
    ```
 
 3. Alternatively, use Docker to build and run the frontend:
@@ -130,7 +120,3 @@ docker-compose up --build
 ```
 
 This will build and start the backend and frontend services, making the chat application accessible locally.
-
----
-
-This README outlines the project setup, architecture, and instructions for running the application. Let me know if you need further adjustments!
