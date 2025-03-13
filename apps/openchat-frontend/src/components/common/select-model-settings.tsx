@@ -28,7 +28,7 @@ export function SelectModelSettings() {
   
   React.useEffect(()=>{
     setSelectedModel(value);
-  }, [value, setSelectedModel]);
+  }, [value]);
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
