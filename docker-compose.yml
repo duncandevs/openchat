@@ -8,7 +8,8 @@ services:
     volumes:
       - ./apps/openchat-frontend:/app
       - /app/node_modules  # Prevents overwriting node_modules
-    command: yarn dev  # Start Next.js in dev mode with watch
+    working_dir: /app  # Ensure commands run in the correct directory
+    command: ["yarn", "dev"]  # Start Next.js in dev mode with watch
     depends_on:
       - backend
 
@@ -18,4 +19,5 @@ services:
       - "8000:8000"
     volumes:
       - ./apps/openchat-backend:/app
-    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload  # Enables auto-reload
+    working_dir: /app  # Ensure the correct working directory
+    command: ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
