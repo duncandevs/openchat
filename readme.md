@@ -85,7 +85,7 @@ Took some additional time to polish the frontend and create the readme which con
 
 2. Run the backend locally:
    ```bash
-   uvicorn app:app --reload
+   uvicorn main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 3. Alternatively, use Docker to build and run the backend:
