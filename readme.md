@@ -1,3 +1,6 @@
+
+<img width="1721" alt="Screenshot 2025-03-13 at 6 30 57 PM" src="https://github.com/user-attachments/assets/573147f8-ce71-4602-9e67-14f0ff7c31a3" />
+
 ## Project Overview
 
 This project implements a simple chat application based on open source models
