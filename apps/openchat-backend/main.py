@@ -69,8 +69,8 @@ async def chat_endpoint(chat_request: ChatRequest):
                 conversation += f"AI: {msg.content}\n"
             else:
                 conversation += f"{msg.role.capitalize()}: {msg.content}\n"
-            return StreamingResponse(
-                chat_stream(conversation, model), media_type="application/x-ndjson"
-            )
+        return StreamingResponse(
+            chat_stream(conversation, model), media_type="application/x-ndjson"
+        )
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(e)}")
