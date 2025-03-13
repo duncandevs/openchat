@@ -79,7 +79,7 @@ Took some additional time to polish the frontend and create the readme which con
 
 1. Install dependencies:
    ```bash
-   cd openchat-backend
+   cd apps/openchat-backend
    pip install -r requirements.txt
    ```
 
@@ -97,7 +97,7 @@ Took some additional time to polish the frontend and create the readme which con
 
 1. Install dependencies:
    ```bash
-   cd openchat-frontend
+   cd apps/openchat-frontend
    yarn install
    ```
 
