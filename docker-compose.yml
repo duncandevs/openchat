@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: ./apps/openchat-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/openchat-frontend:/app
+      - /app/node_modules  # Prevents overwriting node_modules
+    command: yarn dev  # Start Next.js in dev mode with watch
+    depends_on:
+      - backend
+
+  backend:
+    build: ./apps/openchat-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apps/openchat-backend:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload  # Enables auto-reload
