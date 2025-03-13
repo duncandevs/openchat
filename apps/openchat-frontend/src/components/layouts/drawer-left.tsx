@@ -14,9 +14,9 @@ export const DrawerLeft: FC<DrawerLeftProps> = ({ className }) => {
     return <div className={cn(className, "h-screen p-8")}>
         <Flex className="gap-3">
             <Display1>OpenChat</Display1>
-            <Caption1>the open source chat</Caption1>
             <MessageSquare strokeWidth={3}/>
         </Flex>
+        <Caption1>The open source chat</Caption1>
         <Flex col className="mt-12">
             <Flex>
                 <Caption1 className="font-[500] text-secondary-foreground">Threads</Caption1>
